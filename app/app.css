@@ -1,0 +1,267 @@
+/* app css stylesheet */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.rightDiv {
+  float: left;
+  width: 50%;
+  padding: 2%;
+  min-width: 300px;
+  display: inline;
+  margin: auto;
+}
+
+.leftDiv {
+  float: left;
+  width: 48%;
+  padding: 2%;
+  min-width: 300px;
+  display: inline;
+  margin: auto;
+}
+
+.innerRight {
+  float: right;
+  width: 50%;
+  padding: 3%;
+  display: inline;
+}
+
+.innerLeft {
+  float: left;
+  width: 50%;
+  padding: 3%;
+  display: inline;
+}
+
+.greyBox {
+  background-color: #f6f5f5;
+  clear: both;
+  height: 100%;
+  overflow: auto;
+}
+
+.add button{
+  background-color: #f6f5f5;
+  border: none;
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  width: 30%;
+  margin: auto;
+  outline: none;
+}
+
+.pickup {
+  background-color: #080808;
+  color: #ffffff;
+  border: none;
+  padding: 2% 0 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 45%;
+  margin: auto;
+  border-radius: 3%;
+  outline: none;
+}
+
+.cart {
+  background-color: #cc0202;
+  color: #ffffff;
+  border: none;
+  padding: 2% 0 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 45%;
+  margin: auto;
+  border-radius: 5%;
+  outline: none;
+}
+
+.quantity {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5%;
+  width: 45%;
+  border-color: #cccccc;
+  overflow: auto;
+}
+
+.addSub{
+  background-color: Transparent;
+  outline: none;
+  color: #ffffff;
+  border: none;
+  width: 35%;
+  margin: auto;
+}
+
+.button_wrapper {
+  float: right;
+  width: 50%;
+  display: inline;
+}
+
+.quantityWrap {
+  float: left;
+  padding-top: 2.5%;
+  padding-left: 5%;
+  display: inline;
+}
+
+.returnPolicy {
+  float: left;
+  width: 74%;
+  display: inline;
+  font-size: 10px;
+  padding-top: 3%;
+  padding-left: 2%;
+}
+
+.return {
+  float: left;
+  width: auto;
+  display: inline;
+  font-size: 18px;
+  padding-top: 3%;
+}
+
+.store {
+  width: 45%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.promotions {
+  color: #cc0202;
+}
+
+.rating {
+  display: inline;
+  width: 45%;
+}
+
+.mag {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+
+/*Carousel CSS*/
+.imagesSlide {
+  margin: auto;
+  width: 75%;
+}
+
+.mainImg img {
+  width: 75%;
+}
+
+.center {
+  margin: auto;
+  width: 75%;
+  height: 10%;
+  padding-left: 10%;
+}
+
+.carousel-inner {
+  margin-bottom: 2%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-indicators {
+  visibility: hidden;
+  display: none;
+}
+
+.carousel-control {
+  background: none !important;
+  filter: progid:none !important;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.item.active {
+  width: 30%;
+  display: inline-block;
+  float:left;
+  cursor: pointer;
+  margin-left: 15%;
+  overflow: hidden;
+}
+.item.active img{
+  margin: 0 -5% 0 -8%;
+  /*top right bottom left*/
+  border: thin solid black;
+}
+.item.active + .item {
+  width: 30%;
+  display: inline-block;
+  float:left;
+  cursor: pointer;
+  margin-left: -8%;
+  margin-right: -8%;
+  padding: 0;
+}
+.item.active + .item  + .item {
+   width: 40%;
+   display: inline-block;
+   float:left;
+   cursor: pointer;
+   margin: 0;
+   padding-right: 10%;
+}
+
+/*View larger Modal*/
+#myBtn {
+  cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 70%;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+}
+.modal-content img {
+  width: 100%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

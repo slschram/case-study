@@ -1,0 +1,7 @@
+<!-- Display the highlights quadrant which hold product features -->
+<h1>product highlights</h1>
+
+<ul ng-repeat="x in contents[0].ItemDescription[0].features">
+  <!-- ng-bind-html to sanitize html tags inside 'x' -->
+  <li ng-bind-html="x"></li>
+</ul>

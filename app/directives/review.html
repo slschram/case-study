@@ -1,0 +1,98 @@
+<!-- Display the purchasing quadrant which holds reviews -->
+
+<!-- Display overall review in the left column -->
+<div class="innerLeft">
+  <!-- Determine the overall rating & display # of red and/or grey stars -->
+  <div ng-if="contents[0].CustomerReview[0].consolidatedOverallRating == '5'">
+    <span ng-repeat="i in [1,2,3,4,5]">
+      <img src="./icons/redStar.png" width="8%"></img>
+    </span> overall
+  </div>
+  <div ng-if="contents[0].CustomerReview[0].consolidatedOverallRating == 4">
+    <span ng-repeat="i in [1,2,3,4]">
+      <img src="./icons/redStar.png" width="8%"></img>
+    </span>
+  <img src="./icons/greyStar.png" width="8%"></img> overall
+  </div>
+  <div ng-if="contents[0].CustomerReview[0].consolidatedOverallRating == 3">
+    <span ng-repeat="i in [1,2,3]">
+      <img src="./icons/redStar.png" width="8%"></img>
+    </span>
+    <span ng-repeat="i in [1,2]">
+      <img src="./icons/greyStar.png" width="8%"></img>
+    </span> overall
+  </div>
+  <div ng-if="contents[0].CustomerReview[0].consolidatedOverallRating == 2">
+    <span ng-repeat="i in [1,2]">
+      <img src="./icons/redStar.png" width="8%"></img>
+    </span>
+    <span ng-repeat="i in [1,2,3]">
+      <img src="./icons/greyStar.png" width="8%"></img>
+    </span> overall
+  </div>
+  <div ng-if="contents[0].CustomerReview[0].consolidatedOverallRating == 1">
+    <img src="./icons/redStar.png" width="8%"></img>
+    <span ng-repeat="i in [1,2,3,4]">
+      <img src="./icons/greyStar.png" width="8%"></img>
+    </span> overall
+  </div>
+</div>
+
+<!-- Display a link to view all reviews (future functionality) -->
+<!-- TODO list all reviews if I have time -->
+<div class="innerRight">
+  <p>view all {{contents[0].CustomerReview[0].totalReviews}} reviews</p>
+</div>
+
+<div class="greyBox">
+  <!-- List the most helpful positive review -->
+  <div class="innerLeft">
+    <h4>PRO</h4>
+    <p>most helpful 4-5 star review</p>
+    <hr>
+    <!-- Determine the rating (4 or 5) & display # of red and/or grey stars -->
+    <div ng-if="contents[0].CustomerReview[0].Pro[0].overallRating == 5">
+      <span ng-repeat="i in [1,2,3,4,5]">
+        <img src="./icons/redStar.png" width="8%"></img>
+      </span> overall
+    </div>
+    <div ng-if="contents[0].CustomerReview[0].Pro[0].overallRating == 4">
+      <img src="./icons/redStar.png" width="8%"></img>
+      <span ng-repeat="i in [1,2,3,4]">
+        <img src="./icons/greyStar.png" width="8%"></img>
+      </span> overall
+    </div>
+    <h4>{{contents[0].CustomerReview[0].Pro[0].title}}</h4>
+    <p>{{contents[0].CustomerReview[0].Pro[0].review}}</p>
+    <p><a href="">{{contents[0].CustomerReview[0].Pro[0].screenName}}</a>
+      <!-- Format the date to list Month Day, Year -->
+      {{newDate | date:'MMMM dd, yyyy'}}</p>
+  </div>
+
+  <div class="innerRight">
+    <h4>CON</h4>
+    <p>most helpful 1-2 star review</p>
+    <hr>
+    <!-- Determine the rating (1 or 2) & display # of red and/or grey stars -->
+    <div ng-if="contents[0].CustomerReview[0].Con[0].overallRating == 2">
+      <span ng-repeat="i in [1,2]">
+        <img src="./icons/redStar.png" width="8%"></img>
+      </span>
+      <span ng-repeat="i in [1,2,3]">
+        <img src="./icons/greyStar.png" width="8%"></img>
+      </span> overall
+    </div>
+    <div ng-if="contents[0].CustomerReview[0].Con[0].overallRating == 1">
+      <img src="./icons/redStar.png" width="8%"></img>
+      <span ng-repeat="i in [1,2,3,4]">
+        <img src="./icons/greyStar.png" width="8%"></img>
+      </span> overall
+    </div>
+    <h4>{{contents[0].CustomerReview[0].Con[0].title}}</h4>
+    <p>{{contents[0].CustomerReview[0].Con[0].review}}</p>
+    <p><a href="">{{contents[0].CustomerReview[0].Con[0].screenName}}</a>
+      <!-- Format the date to list Month, Day, Year -->
+      {{newDate | date:'MMMM dd, yyyy'}}</p>
+  </div>
+  <hr>
+</div>

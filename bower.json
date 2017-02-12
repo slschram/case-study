@@ -1,0 +1,17 @@
+{
+  "name": "case-study",
+  "description": "A case study modeled after the angular-seed project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://git.target.com/SaraFarkas/case-study",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.11",
+    "angular-route": "~1.5.11",
+    "angular-loader": "~1.5.11",
+    "angular-mocks": "~1.5.11",
+    "html5-boilerplate": "^5.3.0",
+    "angular-touch": "~1.5.11",
+    "angular-sanitize": "~1.5.11"
+  }
+}

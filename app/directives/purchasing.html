@@ -1,0 +1,63 @@
+<!-- Display the purchasing quadrant which holds purchasing features -->
+
+<!-- Display the price and the price qualifier (online) -->
+<h3 style="display: inline">{{contents[0].Offers[0].OfferPrice[0].formattedPriceValue}}</h3>
+<p style="display: inline">{{contents[0].Offers[0].OfferPrice[0].priceQualifier}}</p>
+
+<hr>
+<div class="promotions">
+  <!-- List each eligible promotion with a tag image -->
+  <div ng-repeat="x in contents[0].Promotions track by $index">
+    <img src="./icons/tag.png" width="4%"></img>{{x.Description[0].shortDescription}}
+  </div>
+</div>
+
+<hr>
+<div class="quantity">
+  <p class="quantityWrap">quantity:</p>
+  <div class="button_wrapper">
+    <!-- Display buttons which allow you to increment the quantity & decrement if quantity > 1 -->
+    <button class="addSub" ng-click="count = count - 1" ng-disabled="count == 0" ng-init="count=0">
+      <img src="./icons/subtract.png" width="100%"></img>
+    </button>
+    {{count}}
+    <button class="addSub" ng-click="count = count+1">
+      <img src="./icons/add.png" width="100%"></img>
+    </button>
+  </div>
+</div>
+<br>
+
+<!-- Buttons to purchase the item online or pickup in store if available -->
+<div ng-if="contents[0].purchasingChannelCode == 0">
+    <button type="button" class="pickup">PICKUP IN STORE</button>
+    <button type="button" class="cart">ADD TO CART</button>
+</div>
+
+<div ng-if="contents[0].purchasingChannelCode == 1">
+  <button type="button" class="cart">ADD TO CART</button>
+</div>
+
+<div ng-if="contents[0].purchasingChannelCode == 2">
+  <button type="button" class="pickup">PICKUP IN STORE</button>
+</div>
+
+<!-- Link to find the product in a store (future functionality) -->
+<p class="store">find in a store</p>
+<!-- <br> -->
+
+<!-- Display the legal copy for returns -->
+<!-- TODO link to full policy -->
+<p class="return">returns | </p>
+<p class="returnPolicy" ng-bind-html="contents[0].ReturnPolicy[0].disclaimer">
+</p>
+<br>
+
+<br style="clear: both;">
+
+<!-- Include buttons to add to registry, list, & share (future functionality) -->
+<div class="add">
+  <button type="button">ADD TO REGISTRY</button>
+  <button type="button">ADD TO LIST</button>
+  <button type="button">SHARE</button>
+</div>

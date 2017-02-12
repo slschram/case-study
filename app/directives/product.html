@@ -1,0 +1,36 @@
+<!-- Display the product quadrant which holds product title & images -->
+<h3>{{ contents[0].title }}</h3>
+
+<!-- Begin image carousel -->
+<!-- Main image -->
+<div class="imagesSlide">
+  <div class ="mainImg">
+    <img src="{{img}}">
+  </div>
+
+  <!-- Magnify image & functionality -->
+  <center>
+    <!-- Open the modal -->
+    <p><div id="myBtn">
+      <img src="./icons/magnify.png" width="5%">
+      view larger
+    </div></p>
+  </center>
+
+  <!-- The modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="{{img}}">
+    </div>
+  </div>
+
+  <!-- Thumbnail images for Carousel -->
+  <div class="slider" uib-carousel active="active" >
+       <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+           <div ng-click="setImg(slide.id)">
+             <img class ="center" ng-src="{{slide.image}}">
+           </div>
+       </div>
+  </div>
+</div>
